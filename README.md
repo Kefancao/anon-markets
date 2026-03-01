@@ -61,7 +61,6 @@ Private prediction markets on **Monad** with **Unlink** privacy. Trade binary ou
 | Balances | Private (Unlink) |
 | Transaction history | Private (Unlink) |
 | Collateral positions | Private (Unlink) |
-| Maker hedge activity | Private (burner accounts) |
 | Market prices | Public |
 | Volume / RFQ count | Public |
 | Maker response latency | Public |
@@ -163,19 +162,6 @@ User → Unlink SDK → ZK Proof → Unlink Adapter → RFQ Engine → Predictio
 2. Unlink SDK generates a ZK proof for the unshield
 3. Adapter atomically: unshields collateral → approves RFQ contract → calls `requestQuote()` → reshields change
 4. On-chain, only the adapter address is visible — taker identity is hidden
-
-### Maker hedges (private via burner)
-
-```
-Unlink Pool → Withdraw to Burner EOA → DEX Swap → Sweep back to Pool
-     ↑              ↑                       ↑              ↑
-  Private       Ephemeral EOA         Standard tx      Re-shielded
-```
-
-1. Maker calls `usePrivateRFQ().hedgePrivately()`
-2. Funds are withdrawn from pool to a BIP-44 derived burner EOA
-3. Burner executes hedge trade on any DEX (standard EOA transaction)
-4. Remaining tokens are swept back to the privacy pool
 
 ### Stablecoin yield (private via adapter)
 
