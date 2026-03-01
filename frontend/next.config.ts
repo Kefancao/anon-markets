@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   transpilePackages: ["@unlink-xyz/react", "@unlink-xyz/core"],
   turbopack: {},
   productionBrowserSourceMaps: false,
+  // GitHub Pages: set GITHUB_PAGES=true and GITHUB_PAGES_BASE_PATH=/repo-name in CI
+  ...(process.env.GITHUB_PAGES === "true"
+    ? { output: "export" as const, basePath: process.env.GITHUB_PAGES_BASE_PATH || "" }
+    : {}),
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
