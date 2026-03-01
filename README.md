@@ -2,6 +2,18 @@
 
 Private prediction markets on **Monad** with **Unlink** privacy. Trade binary outcomes with hidden balances, private collateral, and confidential settlement.
 
+
+## Smart Contract Addresses
+
+| Contract | Address |
+|---|---|
+| PredictionMarket | [`0x482d224436c9D3794A0f9AbF6396c90a681462C2`](https://testnet.monadscan.com/address/0x482d224436c9D3794A0f9AbF6396c90a681462C2) |
+| RFQEngine | [`0x4a55A73be0175cD4Bf423C6F81dA9cee95c7002a`](https://testnet.monadscan.com/address/0x4a55A73be0175cD4Bf423C6F81dA9cee95c7002a) |
+| ParlayEngine | [`0xaB787c40630753b991CA1E6Ea8500468bC226bD6`](https://testnet.monadscan.com/address/0xaB787c40630753b991CA1E6Ea8500468bC226bD6) |
+| YieldVault | [`0x639f6CA3F8cD711996CCc6207bedEF07AF87a807`](https://testnet.monadscan.com/address/0x639f6CA3F8cD711996CCc6207bedEF07AF87a807) |
+| Unlink Pool (testnet) | `0x0813da0a10328e5ed617d37e514ac2f6fa49a254` |
+
+
 ## Architecture
 
 ```
@@ -172,16 +184,6 @@ Unlink Pool → Adapter → YieldVault.deposit() → Reshield receipt
 ```
 
 Uses `unlink.interact()` to atomically unshield, deposit into YieldVault, and reshield — tokens are never exposed.
-
-## Smart Contract Addresses
-
-| Contract | Address |
-|---|---|
-| PredictionMarket | Deploy to Monad |
-| RFQEngine | Deploy to Monad |
-| ParlayEngine | Deploy to Monad |
-| YieldVault | Deploy to Monad |
-| Unlink Pool (testnet) | `0x0813da0a10328e5ed617d37e514ac2f6fa49a254` |
 
 ## Tech Stack
 
