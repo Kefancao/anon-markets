@@ -141,6 +141,7 @@ export function Header({ view = "markets", onNavigate }: HeaderProps) {
 
   async function handleEvmConnect() {
     await evm.connect();
+    setPanelView("evm_sign");
   }
 
   async function handleEvmSign() {
