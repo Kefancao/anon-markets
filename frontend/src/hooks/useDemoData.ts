@@ -5,7 +5,7 @@ import type { Market, GlobalStats, RecentFill } from "../types";
 import { getMarkets } from "../lib/api";
 
 const DEMO_MARKETS: Market[] = [{
-  marketId: "0xe4aab3eb4ca349ebd647ad869f50bd01f1d841636c65e9c8249907ed0687c01e",
+  marketId: "0xdd546ae2e8aad86393400bb419a0c4107a7ebc36038bccda5555ce4884079905",
   question: "Will Anon Markets win the Ship Private Ship Fast hackathon?",
   createdAt: Math.floor(Date.now() / 1000) - 172800,
   expiresAt: Math.floor(new Date("2026-03-02").getTime() / 1000),
