@@ -177,7 +177,7 @@ Uses `unlink.interact()` to atomically unshield, deposit into YieldVault, and re
 - **Privacy**: Unlink (ZK privacy pool, adapter pattern, burner accounts)
 - **Contracts**: Solidity 0.8.24, Foundry
 - **Backend**: Node.js, Express, WebSocket, ethers.js, @unlink-xyz/node
-- **Frontend**: Next.js 16, Tailwind CSS, @unlink-xyz/react, lucide-react
+- **Frontend**: Next.js 16, Tailwind CSS, @unlink-xyz/react, lucide-react.
 
 ## API Endpoints
 
